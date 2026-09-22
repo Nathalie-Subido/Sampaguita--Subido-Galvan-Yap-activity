@@ -7,11 +7,15 @@
 accepted_grade_levels = [7,8,9,10,11,12]
 try:
     grade_level = int(input("Please enter grade level: "))
-    # Validating the range of grade level
-    if grade_level in accepted_grade_levels:
-        print("Valid Grade Level")
+    # Checks if Data type is a whole number
+    if grade_level < 0:
+        print("Invalid input. Please Enter a whole number")
     else:
-        print("Invalid Grade Level")
+        # Validating the range of grade level
+        if grade_level in accepted_grade_levels:
+            print("Valid Grade Level")
+        else:
+            print("Invalid Grade Level")
 # Data Type Validator displaying wrong data type
 except ValueError:
-    print("Invalid Grade Level. Please enter a whole number")
+    print("Invalid input. Please enter a numeric value")
